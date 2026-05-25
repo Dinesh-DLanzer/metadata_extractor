@@ -31,6 +31,7 @@ class RecursiveFileScanner implements IFileScanner {
         id: processed.toString(), // Simplified ID
         fileName: p.basename(file.path),
         path: file.path,
+        thumbnailPath: null,
         relativePath: p.relative(file.path, from: path),
         size: stat.size,
         mimeType: mimeType,

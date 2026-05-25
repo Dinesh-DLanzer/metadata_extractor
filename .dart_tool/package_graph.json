@@ -11,7 +11,8 @@
         "ffmpeg_kit_flutter",
         "flutter",
         "metadata_core",
-        "mime"
+        "mime",
+        "path"
       ],
       "devDependencies": [
         "flutter_test"
@@ -34,6 +35,11 @@
         "test_api",
         "vector_math"
       ]
+    },
+    {
+      "name": "path",
+      "version": "1.9.1",
+      "dependencies": []
     },
     {
       "name": "mime",
@@ -61,7 +67,7 @@
     },
     {
       "name": "metadata_core",
-      "version": "0.0.1",
+      "version": "0.0.3",
       "dependencies": [
         "exif",
         "flutter",
@@ -133,11 +139,6 @@
         "clock",
         "collection"
       ]
-    },
-    {
-      "name": "path",
-      "version": "1.9.1",
-      "dependencies": []
     },
     {
       "name": "matcher",
