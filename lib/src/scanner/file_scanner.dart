@@ -3,7 +3,16 @@ import 'package:mime/mime.dart';
 import 'package:path/path.dart' as p;
 import 'package:metadata_core/metadata_core.dart';
 
+/// A scanner implementation that recursively scans a directory or files on the filesystem
+/// and yields progress updates for identified media files.
 class RecursiveFileScanner implements IFileScanner {
+  /// Creates a new instance of [RecursiveFileScanner].
+  const RecursiveFileScanner();
+
+  /// Scans a directory structure at the designated absolute [path]
+  /// and yields [ScanProgress] updates containing discovered [MediaFile]s.
+  ///
+  /// Set [recursive] to `false` to search only the root of the specified directory.
   @override
   Stream<ScanProgress> scan(String path, {bool recursive = true}) async* {
     final directory = Directory(path);
@@ -49,6 +58,7 @@ class RecursiveFileScanner implements IFileScanner {
     yield ScanProgress(totalFiles: files.length, processedFiles: processed, status: 'Complete');
   }
 
+  /// Scans a specific collection of [files] and yields [ScanProgress] updates as they are parsed.
   @override
   Stream<ScanProgress> scanFiles(List<dynamic> files) async* {
     int total = files.length;

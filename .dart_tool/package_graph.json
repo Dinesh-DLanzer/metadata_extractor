@@ -5,10 +5,10 @@
   "packages": [
     {
       "name": "metadata_extractor",
-      "version": "0.0.1",
+      "version": "0.0.2",
       "dependencies": [
         "exif",
-        "ffmpeg_kit_flutter",
+        "ffmpeg_kit_flutter_new",
         "flutter",
         "metadata_core",
         "mime",
@@ -43,12 +43,12 @@
     },
     {
       "name": "mime",
-      "version": "1.0.6",
+      "version": "2.0.0",
       "dependencies": []
     },
     {
-      "name": "ffmpeg_kit_flutter",
-      "version": "6.0.3",
+      "name": "ffmpeg_kit_flutter_new",
+      "version": "4.1.0",
       "dependencies": [
         "ffmpeg_kit_flutter_platform_interface",
         "flutter"
@@ -67,7 +67,7 @@
     },
     {
       "name": "metadata_core",
-      "version": "0.0.3",
+      "version": "0.0.4",
       "dependencies": [
         "exif",
         "flutter",
@@ -200,7 +200,7 @@
     },
     {
       "name": "freezed_annotation",
-      "version": "2.4.4",
+      "version": "3.1.0",
       "dependencies": [
         "collection",
         "json_annotation",

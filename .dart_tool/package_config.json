@@ -56,10 +56,10 @@
       "languageVersion": "3.3"
     },
     {
-      "name": "ffmpeg_kit_flutter",
-      "rootUri": "file:///Users/dineshv/.pub-cache/hosted/pub.dev/ffmpeg_kit_flutter-6.0.3",
+      "name": "ffmpeg_kit_flutter_new",
+      "rootUri": "file:///Users/dineshv/.pub-cache/hosted/pub.dev/ffmpeg_kit_flutter_new-4.1.0",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "3.1"
     },
     {
       "name": "ffmpeg_kit_flutter_platform_interface",
@@ -81,7 +81,7 @@
     },
     {
       "name": "freezed_annotation",
-      "rootUri": "file:///Users/dineshv/.pub-cache/hosted/pub.dev/freezed_annotation-2.4.4",
+      "rootUri": "file:///Users/dineshv/.pub-cache/hosted/pub.dev/freezed_annotation-3.1.0",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
@@ -129,13 +129,13 @@
     },
     {
       "name": "metadata_core",
-      "rootUri": "../../metadata_core",
+      "rootUri": "file:///Users/dineshv/.pub-cache/hosted/pub.dev/metadata_core-0.0.4",
       "packageUri": "lib/",
-      "languageVersion": "3.0"
+      "languageVersion": "3.8"
     },
     {
       "name": "mime",
-      "rootUri": "file:///Users/dineshv/.pub-cache/hosted/pub.dev/mime-1.0.6",
+      "rootUri": "file:///Users/dineshv/.pub-cache/hosted/pub.dev/mime-2.0.0",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },

@@ -2,12 +2,23 @@ import 'dart:io';
 import 'package:exif/exif.dart';
 import 'package:metadata_core/metadata_core.dart';
 
+/// An extractor implementation that processes image files to extract
+/// metadata such as resolution, GPS locations, and camera hardware
+/// information using EXIF tags.
 class ImageMetadataExtractor implements IMetadataExtractor {
+  /// Creates a new instance of [ImageMetadataExtractor].
+  const ImageMetadataExtractor();
+
+  /// Determines if this extractor can process a given [mimeType].
+  ///
+  /// Returns `true` if the MIME type starts with 'image/'.
   @override
   bool canHandle(String mimeType) {
     return mimeType.startsWith('image/');
   }
 
+  /// Extracts EXIF metadata, camera device details, and GPS location
+  /// information from the provided [file].
   @override
   Future<MetadataResult> extract(MediaFile file) async {
     final bytes = await File(file.path).readAsBytes();

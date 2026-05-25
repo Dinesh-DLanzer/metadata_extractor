@@ -1,7 +1,6 @@
 name: metadata_extractor
 description: A powerful metadata extraction implementation for Flutter, enabling rich EXIF and media metadata retrieval.
-version: 0.0.1
-publish_to: 'none'
+version: 0.0.2
 repository: https://github.com/Dinesh-DLanzer/metadata_extractor
 issue_tracker: https://github.com/Dinesh-DLanzer/metadata_extractor/issues
 
@@ -11,11 +10,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  metadata_core:
-    path: ../metadata_core
-  exif: ^3.1.5
-  ffmpeg_kit_flutter: ^6.0.3
-  mime: ^1.0.5
+  metadata_core: ^0.0.4
+  exif: ^3.3.0
+  ffmpeg_kit_flutter_new: ^4.1.0
+  mime: ^2.0.0
   path: ^1.9.0
 
 dev_dependencies:
