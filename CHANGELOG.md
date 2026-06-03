@@ -1,3 +1,9 @@
+## 0.0.3
+
+* Adopt `metadata_core` 0.0.5: populate the new `MediaFile.fullFilePath` field in `RecursiveFileScanner`.
+* Expand README with video extraction section, `scanFiles()` example, full `ImageMetadata` field coverage, `ScanProgress` fields, and Model Reference tables.
+* Fix version constraint in README getting-started snippet (`^0.0.1` → `^0.0.2`).
+
 ## 0.0.2
 
 * Modernized all dependencies to the latest versions.
