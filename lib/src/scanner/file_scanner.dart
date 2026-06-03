@@ -17,14 +17,17 @@ class RecursiveFileScanner implements IFileScanner {
   Stream<ScanProgress> scan(String path, {bool recursive = true}) async* {
     final directory = Directory(path);
     if (!await directory.exists()) {
-      yield ScanProgress(totalFiles: 0, processedFiles: 0, status: 'Directory not found');
+      yield ScanProgress(
+          totalFiles: 0, processedFiles: 0, status: 'Directory not found');
       return;
     }
 
     final List<File> files = [];
-    yield ScanProgress(totalFiles: 0, processedFiles: 0, status: 'Counting files...');
-    
-    await for (final entity in directory.list(recursive: recursive, followLinks: false)) {
+    yield ScanProgress(
+        totalFiles: 0, processedFiles: 0, status: 'Counting files...');
+
+    await for (final entity
+        in directory.list(recursive: recursive, followLinks: false)) {
       if (entity is File) {
         files.add(entity);
       }
@@ -35,7 +38,7 @@ class RecursiveFileScanner implements IFileScanner {
       processed++;
       final stat = await file.stat();
       final mimeType = lookupMimeType(file.path) ?? 'application/octet-stream';
-      
+
       final mediaFile = MediaFile(
         id: processed.toString(), // Simplified ID
         fileName: p.basename(file.path),
@@ -56,7 +59,10 @@ class RecursiveFileScanner implements IFileScanner {
         status: 'Scanning: ${mediaFile.fileName}',
       );
     }
-    yield ScanProgress(totalFiles: files.length, processedFiles: processed, status: 'Complete');
+    yield ScanProgress(
+        totalFiles: files.length,
+        processedFiles: processed,
+        status: 'Complete');
   }
 
   /// Scans a specific collection of [files] and yields [ScanProgress] updates as they are parsed.
@@ -72,6 +78,7 @@ class RecursiveFileScanner implements IFileScanner {
         status: 'Processing: ${file.name}',
       );
     }
-    yield ScanProgress(totalFiles: total, processedFiles: processed, status: 'Complete');
+    yield ScanProgress(
+        totalFiles: total, processedFiles: processed, status: 'Complete');
   }
 }

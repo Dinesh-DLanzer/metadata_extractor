@@ -31,7 +31,7 @@ class VideoMetadataExtractor implements IMetadataExtractor {
 
     final duration = double.tryParse(information.getDuration() ?? '0') ?? 0.0;
     final streams = information.getStreams();
-    
+
     int? width, height;
     double? fps;
     String? codec;

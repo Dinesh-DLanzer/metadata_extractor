@@ -30,12 +30,14 @@ class ImageMetadataExtractor implements IMetadataExtractor {
 
     final brand = data['Image Make']?.toString();
     final model = data['Image Model']?.toString();
-    
+
     // GPS Extraction
     double? lat, lng;
     if (data.containsKey('GPS GPSLatitude')) {
-      lat = _convertToDecimal(data['GPS GPSLatitude']!.values.toList(), data['GPS GPSLatitudeRef']!.toString());
-      lng = _convertToDecimal(data['GPS GPSLongitude']!.values.toList(), data['GPS GPSLongitudeRef']!.toString());
+      lat = _convertToDecimal(data['GPS GPSLatitude']!.values.toList(),
+          data['GPS GPSLatitudeRef']!.toString());
+      lng = _convertToDecimal(data['GPS GPSLongitude']!.values.toList(),
+          data['GPS GPSLongitudeRef']!.toString());
     }
 
     return MetadataResult(
@@ -48,7 +50,9 @@ class ImageMetadataExtractor implements IMetadataExtractor {
         software: data['Image Software']?.toString(),
       ),
       device: DeviceData(brand: brand, model: model),
-      location: lat != null && lng != null ? LocationData(latitude: lat, longitude: lng) : null,
+      location: lat != null && lng != null
+          ? LocationData(latitude: lat, longitude: lng)
+          : null,
     );
   }
 

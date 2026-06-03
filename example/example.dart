@@ -39,7 +39,8 @@ void main() async {
   // 3. Demonstrate scanning a list of files using the scanner
   print('--- Scanning Simulated Files ---');
   await for (final progress in scanner.scanFiles(mockFiles)) {
-    print('Progress: [${progress.processedFiles}/${progress.totalFiles}] - ${progress.status}');
+    print(
+        'Progress: [${progress.processedFiles}/${progress.totalFiles}] - ${progress.status}');
   }
   print('');
 
@@ -47,7 +48,7 @@ void main() async {
   print('--- Image Extractor Demo ---');
   if (imageExtractor.canHandle(mockImageFile.mimeType)) {
     print('Image Extractor can handle: ${mockImageFile.fileName}');
-    
+
     // In a real application, you would run:
     // final result = await imageExtractor.extract(mockImageFile);
     // Since this is a self-contained CLI demo, we show the structured output format:
@@ -72,8 +73,10 @@ void main() async {
 
     print('Brand: ${sampleResult.device?.brand}');
     print('Model: ${sampleResult.device?.model}');
-    print('Dimensions: ${sampleResult.imageMetadata?.width} x ${sampleResult.imageMetadata?.height}');
-    print('GPS: ${sampleResult.location?.latitude}, ${sampleResult.location?.longitude}');
+    print(
+        'Dimensions: ${sampleResult.imageMetadata?.width} x ${sampleResult.imageMetadata?.height}');
+    print(
+        'GPS: ${sampleResult.location?.latitude}, ${sampleResult.location?.longitude}');
   }
   print('');
 
@@ -99,7 +102,8 @@ void main() async {
 
     print('Duration: ${sampleResult.videoMetadata?.duration} seconds');
     print('Codec: ${sampleResult.videoMetadata?.codec}');
-    print('Dimensions: ${sampleResult.videoMetadata?.width} x ${sampleResult.videoMetadata?.height}');
+    print(
+        'Dimensions: ${sampleResult.videoMetadata?.width} x ${sampleResult.videoMetadata?.height}');
     print('Frame Rate: ${sampleResult.videoMetadata?.fps} fps');
   }
 }
