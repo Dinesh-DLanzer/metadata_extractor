@@ -15,7 +15,7 @@ Add `metadata_extractor` to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  metadata_extractor: ^0.0.2
+  metadata_extractor: ^0.0.3
 ```
 
 ## Usage

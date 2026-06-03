@@ -5,7 +5,7 @@
   "packages": [
     {
       "name": "metadata_extractor",
-      "version": "0.0.2",
+      "version": "0.0.3",
       "dependencies": [
         "exif",
         "ffmpeg_kit_flutter_new",
@@ -67,9 +67,10 @@
     },
     {
       "name": "metadata_core",
-      "version": "0.0.4",
+      "version": "0.0.5",
       "dependencies": [
         "exif",
+        "exif_reader",
         "flutter",
         "freezed_annotation",
         "json_annotation"
@@ -208,6 +209,19 @@
       ]
     },
     {
+      "name": "exif_reader",
+      "version": "4.1.0",
+      "dependencies": [
+        "brotli",
+        "collection",
+        "iso_base_media",
+        "jpeg_markers",
+        "random_access_source",
+        "sprintf",
+        "web"
+      ]
+    },
+    {
       "name": "sky_engine",
       "version": "0.0.0",
       "dependencies": []
@@ -294,6 +308,36 @@
       "dependencies": [
         "collection"
       ]
+    },
+    {
+      "name": "jpeg_markers",
+      "version": "2.7.0",
+      "dependencies": []
+    },
+    {
+      "name": "random_access_source",
+      "version": "4.2.1",
+      "dependencies": [
+        "web"
+      ]
+    },
+    {
+      "name": "web",
+      "version": "1.1.1",
+      "dependencies": []
+    },
+    {
+      "name": "iso_base_media",
+      "version": "6.3.2",
+      "dependencies": [
+        "random_access_source",
+        "web"
+      ]
+    },
+    {
+      "name": "brotli",
+      "version": "0.6.0",
+      "dependencies": []
     },
     {
       "name": "vm_service",
